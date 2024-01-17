@@ -1,0 +1,18 @@
+[
+    {
+        "nastavnik": "dusan",
+        "predmet": "informatika",
+        "sedmica": "2024-02-22",
+        "razred": null,
+        "provjera": "pismeni",
+        "odjeljenje": null
+    },
+    {
+        "nastavnik": "",
+        "predmet": "",
+        "sedmica": "2024-W15",
+        "razred": null,
+        "provjera": null,
+        "odjeljenje": null
+    }
+]
