@@ -5,17 +5,27 @@ require_once __DIR__ . '/classes/htmlElement.php';
 require_once __DIR__ . '/classes/Form.php';
 require_once __DIR__ . '/classes/BaseInput.php';
 require_once __DIR__ . '/classes/TextInput.php';
-require_once __DIR__ . '/classes/Button.php';
 require_once __DIR__ . '/classes/Checkbox.php';
+require_once __DIR__ . '/classes/Radio.php';
+require_once __DIR__ . '/classes/Button.php';
+require_once __DIR__ . '/classes/BaseSelect.php';
 require_once __DIR__ . '/classes/Select.php';
 require_once __DIR__ . '/classes/DateInput.php';
 
+$razred = ['Разред', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
 $form = new Form ('schedule.php');
 $form->addElement(new TextInput('nastavnik', 'Ime i prezime', 'nastavnik', 'Ime i prezime'));
-$form->addElement(new TextInput('predmet', 'Predmet', 'predmet', 'Predmet'));
-$form->addElement(new Checkbox('provjera', 'Pismeni', 'provjera', 'pismeni', 'pismeni', 'col-md-2'));
-$form->addElement(new Checkbox('provjera', 'Kontrolni', 'kontrolni', 'kontrolni', 'kontrolni', 'col-2'));
-$form->addElement(new DateInput('sedmica', 'Sedmica'));
+$form->addElement(new Select(['Predmet', 'Biologiija', 'Informatika', 'engleski jezik'],'predmet', 'Predmet', 'predmet'));
+$form->addElement(new Radio('provjera', 'Pismeni', 'pismeni', 'pismeni', 'pismeni', 'col-2'));
+$form->addElement(new Radio('provjera', 'Kontrolni', 'kontrolni', 'kontrolni', 'kontrolni', 'col-2'));
+$form->addElement(new Select($razred, 'razred', 'Razred', 'razred', 'col-md-2'));
+$i = 1;
+while ($i <= 5)
+{
+    $form->addElement(new Checkbox('odjeljenje[]', '', '', '', $i, 'col-2'));
+    $i++;
+}
+$form->addElement(new DateInput('sedmica', 'Sedmica', 'sedmica'));
 $form->addElement(new Button('Proslijedi'));
 $schedules = validateFile('schedule.json');
 ?>

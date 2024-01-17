@@ -9,7 +9,7 @@ abstract class BaseInput extends HtmlElement
     public string $bootstrapClass;
 
 
-    public function __construct(string $name, string $label = '', string $for ='', string $placeholder= '', string $value = '', string $bootstrapClass = 'col-md-6')
+    public function __construct(string $name, string $label = '', string $for ='', string $placeholder= '', string $value = '', string $bootstrapClass = 'col-md-4')
     {
         $this->name = $name;
         $this->label = $label;
@@ -21,7 +21,9 @@ abstract class BaseInput extends HtmlElement
 
     public function render (): string
     {
-        return sprintf('<div class="%s"><label for="%s">%s</label>%s', $this->bootstrapClass, $this->for, $this->label, $this->renderInput());
+        return sprintf('
+            <div class="%s">
+                <label for="%s" class="form-check-label">%s</label>%s', $this->bootstrapClass, $this->for, $this->label, $this->renderInput());
     }
 
     abstract public function renderInput (): string;

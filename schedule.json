@@ -1,18 +1,36 @@
 [
     {
         "nastavnik": "dusan",
-        "predmet": "informatika",
-        "sedmica": "2024-02-22",
-        "razred": null,
+        "predmet": "Informatika",
+        "sedmica": "2024-W06",
+        "razred": "7",
         "provjera": "pismeni",
-        "odjeljenje": null
+        "odjeljenje": [
+            "1",
+            "3",
+            "5"
+        ]
     },
     {
-        "nastavnik": "",
-        "predmet": "",
-        "sedmica": "2024-W15",
-        "razred": null,
-        "provjera": null,
-        "odjeljenje": null
+        "nastavnik": "mladen",
+        "predmet": "engleski jezik",
+        "sedmica": "2024-W06",
+        "razred": "6",
+        "provjera": "kontrolni",
+        "odjeljenje": [
+            "3",
+            "4"
+        ]
+    },
+    {
+        "nastavnik": "mladen",
+        "predmet": "engleski jezik",
+        "sedmica": "2024-W10",
+        "razred": "6",
+        "provjera": "kontrolni",
+        "odjeljenje": [
+            "3",
+            "4"
+        ]
     }
 ]
