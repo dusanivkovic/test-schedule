@@ -10,6 +10,6 @@ class Button extends HtmlElement
 
     public function render(): string
     {
-        return sprintf('<div class="col-12"><button type="submit" class="btn btn-primary w-100">%s</button></div>', $this->text);
+        return sprintf('<div class="col-12"><button type="submit" value="" name="submit" class="btn btn-primary w-100">%s</button></div>', $this->text);
     }
 }

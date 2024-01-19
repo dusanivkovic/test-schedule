@@ -1,29 +1,36 @@
 <?php
 require 'functions.php';
-$nastavnik = $_POST['nastavnik'];
-$predmet = $_POST['predmet'];
-$sedmica = $_POST['sedmica'];
-$razred = $_POST['razred'];
-$provjera = $_POST['provjera'];
-$odjeljenje = $_POST['odjeljenje'];
 
-dump($odjeljenje);
-
-If (file_exists('schedule.json'))
+If (!file_exists('schedule.json'))
+{
+    $schedules = [];
+}else
 {
     $json = file_get_contents('schedule.json');
     $schedules = json_decode($json, true);
-    $schedules[] = [
-        'nastavnik' => $nastavnik,
-        'predmet'   => $predmet, 
-        'sedmica'   => $sedmica,
-        'razred'    => $razred,
-        'provjera'  => $provjera,
-        'odjeljenje'=> $odjeljenje
-    ];
-}else
-{
-    $schedules = [];
+    if (isset($_POST['submit']))
+    {
+        $nastavnik = sanitizeAndTrim($_POST['nastavnik']) ?? false;
+        $predmet = sanitizeAndTrim($_POST['predmet']);
+        $sedmica = $_POST['sedmica']; 
+        $razred = $_POST['razred'];
+        $provjera = $_POST['provjera'];
+        $odjeljenje = $_POST['odjeljenje[]'];
+        if ($nastavnik && $predmet != 'Предмет' && $razred != 'Разред')
+        {
+            $schedules[] = [
+                'nastavnik' => $nastavnik,
+                'predmet'   => $predmet, 
+                'sedmica'   => date("d-m-Y", strtotime($sedmica)),
+                'razred'    => $razred,
+                'provjera'  => $provjera,
+                'odjeljenje'=> $odjeljenje
+            ];
+        }else
+        {
+            header('location: index.php?error=empty');
+        }
+    }
 }
 file_put_contents('schedule.json', json_encode($schedules, JSON_PRETTY_PRINT));
 dump($schedules);

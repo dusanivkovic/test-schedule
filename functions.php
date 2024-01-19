@@ -6,16 +6,22 @@ function dump ($input)
    echo '</pre>';
 }
 
-function validateFile ($file)
+function sanitizeAndTrim ($input) 
 {
-    if (file_exists($file))
-    {
-        $json = file_get_contents($file);
-        $schedule = json_decode($json, true);
-    }else
-    {
-        $schedule = [];
-        // header('location: index.php?error=entry');
-    }
-    return $schedule;
+    $userInput = htmlspecialchars($input, ENT_QUOTES);
+    
+    return trim($userInput);
 }
+
+// function validateFile ($file)
+// {
+//     if (file_exists($file))
+//     {
+//         $json = file_get_contents($file);
+//         $schedule = json_decode($json, true);
+//     }else
+//     {
+//         $schedule = [];
+//     }
+//     return $schedule;
+// }

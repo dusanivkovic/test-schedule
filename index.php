@@ -15,7 +15,7 @@ require_once __DIR__ . '/classes/DateInput.php';
 $razred = ['Разред', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
 $form = new Form ('schedule.php');
 $form->addElement(new TextInput('nastavnik', 'Ime i prezime', 'nastavnik', 'Ime i prezime'));
-$form->addElement(new Select(['Predmet', 'Biologiija', 'Informatika', 'engleski jezik'],'predmet', 'Predmet', 'predmet'));
+$form->addElement(new Select(['Предмет', 'Biologiija', 'Informatika', 'engleski jezik'],'predmet', 'Predmet', 'predmet'));
 $form->addElement(new Radio('provjera', 'Pismeni', 'pismeni', 'pismeni', 'pismeni', 'col-2'));
 $form->addElement(new Radio('provjera', 'Kontrolni', 'kontrolni', 'kontrolni', 'kontrolni', 'col-2'));
 $form->addElement(new Select($razred, 'razred', 'Razred', 'razred', 'col-md-2'));
@@ -27,7 +27,6 @@ while ($i <= 5)
 }
 $form->addElement(new DateInput('sedmica', 'Sedmica', 'sedmica'));
 $form->addElement(new Button('Proslijedi'));
-$schedules = validateFile('schedule.json');
 ?>
 <!DOCTYPE html>
 <html lang="en">
