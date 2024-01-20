@@ -38,6 +38,7 @@ If (!file_exists('schedule.json'))
                 'provjera'  => $provjera,
                 'odjeljenje'=> $odjeljenje
             ];
+            header('location: index.php');
         }
     }
 }

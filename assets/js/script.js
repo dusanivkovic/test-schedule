@@ -5,7 +5,7 @@ const div = document.createElement('div');
 div.classList.add('invalid-feedback');
 div.style.display = 'block';
 const  urlSearch = location.search;
-const form = document.querySelector('form');
+const form = document.querySelector('#form');
 
 if (urlSearch == '?error=predmet')
 {
@@ -25,8 +25,33 @@ if (urlSearch == '?error=razred')
     appendDivAndStyle (razred);
 }
 
-predmet.addEventListener('change', () => {console.log(predmet.value)})
+function setValueFromLocalstorage ()
+{
+    const options = predmet.querySelectorAll('option');
+    if (sessionStorage.nastavnik)
+    {
+        nastavnik.setAttribute('value', sessionStorage.nastavnik);
+    }
+    if (sessionStorage.predmet)
+    {
+        predmet.setAttribute('value', sessionStorage.predmet);
+    }
+    nastavnik.addEventListener('blur', () => {
+        sessionStorage.nastavnik = nastavnik.value;
+        console.log(nastavnik.value)
+    });
+    predmet.addEventListener('blur', (e) => { 
+        sessionStorage.predmet = predmet.value});
+    [...options].map(option => {
+        if (option.value == sessionStorage.predmet) 
+        {
+            return option.setAttribute('selected', true);
+        }
+    });
+}
 
+
+window.addEventListener('load', () => setValueFromLocalstorage ())
 function appendDivAndStyle (inpt)
 {
     inpt.parentElement.append(div);
