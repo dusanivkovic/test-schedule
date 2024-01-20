@@ -1,7 +1,6 @@
 <?php
 class Radio extends BaseInput
 {
-    // public array $radio = ['pismeni', 'kontrolni'];
     public function renderInput(): string
     {
         return sprintf(

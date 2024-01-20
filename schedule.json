@@ -1,58 +1,102 @@
 [
     {
         "nastavnik": "dusan",
-        "predmet": "Predmet",
+        "predmet": "Основи информатике",
+        "sedmica": "05-02-2024",
+        "razred": "VI",
+        "provjera": "Писмени",
+        "odjeljenje": [
+            "2",
+            "3"
+        ]
+    },
+    {
+        "nastavnik": "dusan",
+        "predmet": "Енглески језик",
         "sedmica": "01-01-1970",
-        "razred": "\u0420\u0430\u0437\u0440\u0435\u0434",
-        "provjera": null,
+        "razred": "II",
+        "provjera": "Писмени",
+        "odjeljenje": [
+            "2"
+        ]
+    },
+    {
+        "nastavnik": "mladen",
+        "predmet": "Енглески језик",
+        "sedmica": "05-02-2024",
+        "razred": "IV",
+        "provjera": "Писмени",
+        "odjeljenje": "3"
+    },
+    {
+        "nastavnik": "bojana",
+        "predmet": "Њемачки језик",
+        "sedmica": "05-02-2024",
+        "razred": "III",
+        "provjera": "Писмени",
+        "odjeljenje": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "nastavnik": "darko",
+        "predmet": "Музичка култура",
+        "sedmica": "05-02-2024",
+        "razred": "VI",
+        "provjera": "Писмени",
+        "odjeljenje": "5"
+    },
+    {
+        "nastavnik": "dusan",
+        "predmet": "Енглески језик",
+        "sedmica": "01-01-1970",
+        "razred": "V",
+        "provjera": "Писмени",
+        "odjeljenje": [
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    {
+        "nastavnik": "ranko",
+        "predmet": "Њемачки језик",
+        "sedmica": "12-02-2024",
+        "razred": "VI",
+        "provjera": "Контролни",
+        "odjeljenje": [
+            "2",
+            "5"
+        ]
+    },
+    {
+        "nastavnik": "dusan",
+        "predmet": "Српски језик",
+        "sedmica": "01-01-1970",
+        "razred": "III",
+        "provjera": "Контролни",
         "odjeljenje": null
     },
     {
         "nastavnik": "dusan",
-        "predmet": "Predmet",
-        "sedmica": "01-01-1970",
-        "razred": "\u0420\u0430\u0437\u0440\u0435\u0434",
-        "provjera": null,
-        "odjeljenje": null
+        "predmet": "Српски језик",
+        "sedmica": "19-02-2024",
+        "razred": "II",
+        "provjera": "Контролни",
+        "odjeljenje": [
+            "2"
+        ]
     },
     {
         "nastavnik": "dusan",
-        "predmet": "Predmet",
-        "sedmica": "01-01-1970",
-        "razred": "\u0420\u0430\u0437\u0440\u0435\u0434",
-        "provjera": null,
-        "odjeljenje": null
-    },
-    {
-        "nastavnik": "dusan",
-        "predmet": "Predmet",
-        "sedmica": "01-01-1970",
-        "razred": true,
-        "provjera": null,
-        "odjeljenje": null
-    },
-    {
-        "nastavnik": "bojana",
-        "predmet": "Predmet",
-        "sedmica": "01-01-1970",
-        "razred": true,
-        "provjera": null,
-        "odjeljenje": null
-    },
-    {
-        "nastavnik": "bojana",
-        "predmet": "Predmet",
-        "sedmica": "01-01-1970",
-        "razred": true,
-        "provjera": null,
-        "odjeljenje": null
-    },
-    {
-        "nastavnik": "bojana",
-        "predmet": "Predmet",
-        "sedmica": "01-01-1970",
-        "razred": "IX",
-        "provjera": null,
-        "odjeljenje": null
+        "predmet": "Основи информатике",
+        "sedmica": "29-01-2024",
+        "razred": "VIII",
+        "provjera": "Контролни",
+        "odjeljenje": [
+            "2"
+        ]
     }
 ]

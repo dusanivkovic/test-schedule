@@ -5,9 +5,8 @@ class Checkbox extends BaseInput
     {
         return sprintf('
                 <div class="form-check">
-                    <label class="form-check-label" for="%s">%s</label>    
-                    <input class="form-check-input" type="checkbox" name="%s" value="%s">
+                    <input id="%s" class="form-check-input" type="checkbox" name="%s" value="%s">
                 </div>
-            </div>', $this->for, $this->value, $this->name, $this->value);
+            </div>', $this->id, $this->name, $this->value);
     }
 }
